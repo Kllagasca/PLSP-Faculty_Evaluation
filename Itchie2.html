@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advising and Mentoring Evaluation System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="gomez2.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="plsp_logo.png" alt="PLSP Logo" width="500" height="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Itchie.html">Evaluation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()" href="index.html">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </header>
+
+    <main>
+        <section id="title-section">
+            <div id="title-info">
+                <h1>Faculty Evaluation</h1>
+            </div>
+        </section>
+
+        <section id="faculty-section">
+            <div style="width: auto; margin-left: auto; margin-right: auto">
+                <img src="teacher.png" alt="Faculty Picture">
+                <h2>Miss Teacher</h2>
+                <p>Instructor</p>
+            </div>
+        </section>
+
+        <section id="evaluation-section">
+            <h2>Evaluation Questions</h2>
+            <h3>Instructor-Specific: Delivery - Teaching Methods, Strategies, Practices and Clarity</h3>
+            <form id="evaluation-form">
+                <div class="container">
+                    <div class="question-container">
+                        <div class="question">The instructor was well prepared for class.</div>
+                        <hr>
+                        <div class="question">The instructor used class time effectively.</div>
+                        <hr>
+                        <div class="question">The instructor was organized, well prepared, and used class time efficiently.</div>
+                    </div>
+                
+                    <div class="likert-scale">
+                        <div>
+                            <input type="radio" id="q1_rating1" name="q1_rating" value="1">
+                            <label for="q1_rating1">1</label>
+                            <input type="radio" id="q1_rating2" name="q1_rating" value="2">
+                            <label for="q1_rating2">2</label>
+                            <input type="radio" id="q1_rating3" name="q1_rating" value="3">
+                            <label for="q1_rating3">3</label>
+                            <input type="radio" id="q1_rating4" name="q1_rating" value="4">
+                            <label for="q1_rating4">4</label>
+                            <input type="radio" id="q1_rating5" name="q1_rating" value="5">
+                            <label for="q1_rating5">5</label>
+                        </div>
+                        <hr>
+                        <div>
+                            <input type="radio" id="q2_rating1" name="q2_rating" value="1">
+                            <label for="q2_rating1">1</label>
+                            <input type="radio" id="q2_rating2" name="q2_rating" value="2">
+                            <label for="q2_rating2">2</label>
+                            <input type="radio" id="q2_rating3" name="q2_rating" value="3">
+                            <label for="q2_rating3">3</label>
+                            <input type="radio" id="q2_rating4" name="q2_rating" value="4">
+                            <label for="q2_rating4">4</label>
+                            <input type="radio" id="q2_rating5" name="q2_rating" value="5">
+                            <label for="q2_rating5">5</label>
+                        </div>
+                        <hr>
+                        <div>
+                            <input type="radio" id="q3_rating1" name="q3_rating" value="1">
+                            <label for="q3_rating1">1</label>
+                            <input type="radio" id="q3_rating2" name="q3_rating" value="2">
+                            <label for="q3_rating2">2</label>
+                            <input type="radio" id="q3_rating3" name="q3_rating" value="3">
+                            <label for="q3_rating3">3</label>
+                            <input type="radio" id="q3_rating4" name="q3_rating" value="4">
+                            <label for="q3_rating4">4</label>
+                            <input type="radio" id="q3_rating5" name="q3_rating" value="5">
+                            <label for="q3_rating5">5</label>
+                        </div>
+                    </div>
+                </div>
+                <section>
+                    <div>
+                      <form id="myForm" action="page2.html" method="post" onsubmit="return nextPage()">
+                        <!-- Your form fields here -->
+                        <button type="submit" class="btn-next">Submit</button>
+                      </form>
+                    </div>
+                  </section>
+                  
+                  <script>
+                    function nextPage() {
+                      // Your JavaScript logic here
+                      // For example, validation checks
+                      if (validationPasses) {
+                        return true; // Proceed with form submission
+                      } else {
+                        return false; // Prevent form submission
+                      }
+                    }
+                  </script>
+                  
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
